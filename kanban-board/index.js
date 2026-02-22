@@ -1,5 +1,5 @@
-const cards = document.querySelector(".card");
-const lists = document.querySelector(".list");
+const cards = document.querySelectorAll(".card");
+const lists = document.querySelectorAll(".list");
 
 for (const card of cards) {
   card.addEventListener("dragstart", dragStart);
