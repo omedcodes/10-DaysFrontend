@@ -26,3 +26,20 @@ function dragOver(e) {
   // Override the browsers default behaviour so dropping on other elements works
   e.preventDefault();
 }
+
+function dragEnter(e) {
+  e.preventDefault();
+  this.classList.add("over");
+}
+
+function dragLeave(e) {
+  this.classList.remove("over");
+}
+
+function dragDrop(e) {
+  const id = e.dataTransfer.getData("text/plain");
+  const card = document.getElementById(id);
+
+  this.appendChild(card);
+  this.classList.remove("over");
+}
